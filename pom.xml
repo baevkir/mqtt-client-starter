@@ -19,7 +19,6 @@
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
         <telegram-bot.version>4.8</telegram-bot.version>
-        <project-reactor.version>3.3.4.RELEASE</project-reactor.version>
         <commons-collections4.version>4.1</commons-collections4.version>
         <commons-lang3.version>3.10</commons-lang3.version>
         <jackson.version>2.11.0.rc1</jackson.version>
@@ -57,6 +56,10 @@
             <groupId>org.eclipse.paho</groupId>
             <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
             <version>${mqtt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

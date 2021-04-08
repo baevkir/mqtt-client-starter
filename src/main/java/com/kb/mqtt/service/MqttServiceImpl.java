@@ -3,7 +3,6 @@ package com.kb.mqtt.service;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.IMqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
-import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 
 @Slf4j
