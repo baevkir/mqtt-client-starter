@@ -10,9 +10,10 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 import reactor.core.publisher.Flux;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @Slf4j
-public class MqttServiceImpl implements MqttService, AutoCloseable {
+public class MqttServiceImpl implements MqttService {
     private IMqttClient mqttClient;
     private final MqttProperties properties;
     private final MqttMessageConverter mqttMessageConverter;
@@ -65,7 +66,7 @@ public class MqttServiceImpl implements MqttService, AutoCloseable {
         mqttClient.connect(options);
     }
 
-    @Override
+    @PreDestroy
     public void close() throws Exception {
         if (mqttClient.isConnected()) {
             mqttClient.disconnect();
