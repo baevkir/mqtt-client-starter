@@ -23,7 +23,7 @@ public class MqttClientConfiguration {
 
     @Bean
     public IMqttClient mqttClient(MqttProperties properties) throws MqttException {
-        var mqttClient = new MqttClient(properties.getServer(), properties.getClientId(), new MemoryPersistence());
+        var mqttClient = new MqttClient(properties.getServer(), properties.getClientId() + "_" + System.nanoTime(), new MemoryPersistence());
 
         MqttConnectOptions options = new MqttConnectOptions();
         options.setAutomaticReconnect(true);
