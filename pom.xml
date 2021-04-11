@@ -11,7 +11,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kb.mqtt</groupId>
+    <groupId>com.kb</groupId>
     <artifactId>mqtt-client-starter</artifactId>
     <version>1.0-SNAPSHOT</version>
 
